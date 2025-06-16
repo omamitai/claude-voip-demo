@@ -4,132 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Starlight VoIP Pro - Crystal clear HD voice and video calls powered by WebRTC. Experience next-generation peer-to-peer communication with advanced features." />
-    <meta name="keywords" content="voip, webrtc, video calls, voice calls, peer-to-peer, real-time communication" />
-    <meta name="author" content="Starlight VoIP Pro" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Starlight VoIP Pro - Modern Video Calling" />
-    <meta property="og:description" content="Crystal clear HD voice and video calls powered by WebRTC technology." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://starlight-voip.com" />
-    <meta property="og:image" content="/og-image.png" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Starlight VoIP Pro" />
-    <meta name="twitter:description" content="Crystal clear HD voice and video calls powered by WebRTC." />
-    <meta name="twitter:image" content="/twitter-image.png" />
-    
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#6366f1" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Starlight VoIP" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/manifest.json" />
-    
-    <!-- Preconnect to External Resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://stun.l.google.com" />
-    
-    <!-- Title -->
     <title>Starlight VoIP Pro - Next-Gen Voice & Video Calls</title>
     
-    <!-- Critical CSS for faster initial paint -->
-    <style>
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        background: #111827;
-        color: #ffffff;
-      }
-      
-      #root {
-        min-height: 100vh;
-      }
-      
-      /* Loading spinner */
-      .app-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(to bottom right, #1f2937, #111827);
-        z-index: 9999;
-      }
-      
-      .spinner {
-        width: 50px;
-        height: 50px;
-        border: 3px solid rgba(99, 102, 241, 0.2);
-        border-top-color: #6366f1;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-      
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-    </style>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
   </head>
-  <body>
-    <!-- No JavaScript Warning -->
-    <noscript>
-      <div style="
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(to bottom right, #1f2937, #111827);
-        color: white;
-        font-family: sans-serif;
-        padding: 2rem;
-        text-align: center;
-      ">
-        <div>
-          <h1 style="font-size: 2rem; margin-bottom: 1rem;">JavaScript Required</h1>
-          <p style="color: #9ca3af;">
-            This application requires JavaScript to be enabled in your browser.
-          </p>
-        </div>
-      </div>
-    </noscript>
-    
-    <!-- App Root -->
-    <div id="root">
-      <!-- Loading Spinner (removed by React when app loads) -->
-      <div class="app-loader">
-        <div class="spinner"></div>
-      </div>
-    </div>
-    
-    <!-- Main App Script -->
+  <body class="bg-background text-text-primary font-sans">
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    
-    <!-- Performance Monitoring -->
-    <script>
-      // Log performance timing
-      window.addEventListener('load', function() {
-        if (window.performance && window.performance.timing) {
-          setTimeout(function() {
-            const timing = window.performance.timing;
-            const loadTime = timing.loadEventEnd - timing.navigationStart;
-            console.log('Page load time:', loadTime + 'ms');
-          }, 0);
-        }
-      });
-    </script>
   </body>
 </html>
