@@ -77,7 +77,6 @@ const AudioVisualizer = ({ stream, color = '#60a5fa', size = 'medium' }: AudioVi
             {/* Audio bars */}
             <div className="flex items-center justify-center space-x-1">
                 {Array.from({ length: barCount }).map((_, index) => {
-                    const delay = index * 0.1;
                     const height = isActive 
                         ? Math.max(0.3, audioLevel * (1 - index * 0.15)) 
                         : 0.2;
@@ -95,4 +94,14 @@ const AudioVisualizer = ({ stream, color = '#60a5fa', size = 'medium' }: AudioVi
                                 height: {
                                     duration: 0.1,
                                     ease: 'easeOut'
-                                },
+                                }
+                            }}
+                        />
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
+export default AudioVisualizer;
